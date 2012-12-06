@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>                                                               
-<manifest>
-
-    <remote name="github_ant-wireless"
-        fetch="git://github.com/ant-wireless/"
-        />
-
-    <remove-project name="platform/frameworks/base" />
-    <project path="frameworks/base"
-        name="platform_frameworks_base"
-        remote="github_ant-wireless"
-        revision="refs/tags/android-4.1.2_r1+ant_2.2.0"
-        />
-
-    <project path="external/ant-wireless/build"
-        name="Android_build"
-        remote="github_ant-wireless"
-        revision="refs/tags/android-4.1.2_r1+ant_2.2.0"
-        />
-
-    <project path="external/ant-wireless/antradio-library"
-        name="Android_antradio-library"
-        remote="github_ant-wireless"
-        revision="refs/tags/android-4.1.2_r1+ant_2.2.0"
-        />
-
-    <project path="external/ant-wireless/ant-hal"
-        name="Linux_ant-hal"
-        remote="github_ant-wireless"
-        revision="refs/tags/android-4.1.2_r1+ant_2.2.0"
-        />
-
-    <project path="external/ant-wireless/ANTHALService"
-        name="Android_ANTHALService"
-        remote="github_ant-wireless"
-        revision="refs/tags/android-4.1.2_r1+ant_2.2.0"
-        />
-
-    <project path="external/ant-wireless/ANTRadioService"
-        name="Android_ANTRadioService"
-        remote="github_ant-wireless"
-        revision="refs/tags/android-4.1.2_r1+ant_2.2.0"
-        />
-
-</manifest> 
+<manifest>                                                                                           
+                                                                                                     
+    <remote name="github_ant-wireless"                                                               
+        fetch="git://github.com/ant-wireless"                                                        
+        />                                                                                           
+                                                                                                     
+    <remove-project name="platform/frameworks/base" />                                               
+    <project  name="platform_frameworks_base"                                                        
+        path="frameworks/base"                                                                       
+        remote="github_ant-wireless"                                                                 
+        revision="refs/tags/android-4.1.2_r1+ant_2.2.0"                                              
+        />                                                                                           
+                                                                                                     
+    <project name="Android_build"                                                                    
+        path="external/ant-wireless/build"                                                           
+        remote="github_ant-wireless"                                                                 
+        revision="refs/tags/Android_System_Package_2-2-0"                                            
+        />                                                                                           
+                                                                                                     
+    <project name="Android_antradio-library"                                                         
+        path="external/ant-wireless/antradio-library"                                                
+        remote="github_ant-wireless"                                                                 
+        revision="refs/tags/Android_System_Package_2-2-0"                                            
+        />                                                                                           
+                                                                                                     
+    <project name="Linux_ant-hal"                                                                    
+        path="external/ant-wireless/ant-hal"                                                         
+        remote="github_ant-wireless"                                                                 
+        revision="refs/tags/Android_System_Package_2-2-0"                                            
+        />                                                                                           
+                                                                                                     
+    <project name="Android_ANTHALService"                                                            
+        path="external/ant-wireless/ANTHALService"                                                   
+        remote="github_ant-wireless"                                                                 
+        revision="refs/tags/Android_System_Package_2-2-0"                                            
+        />                                                                                           
+                                                                                                     
+    <project name="Android_ANTRadioService"                                                          
+        path="external/ant-wireless/ANTRadioService"                                                 
+        remote="github_ant-wireless"                                                                 
+        revision="refs/tags/Android_System_Package_2-2-0"                                            
+        />                                                                                           
+                                                                                                     
+</manifest>
