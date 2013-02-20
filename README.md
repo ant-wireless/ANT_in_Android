@@ -20,8 +20,9 @@ See the License for the specific language governing permissions and limitations 
 
 #1. OVERVIEW
 
-This is the general release for ANT support in Android.  
+This is the Android 4.2 release for ANT support.
 
+Chips using Vendor Specific Bluetooth HCI messaging for ANT packets (wl12xx and bcm433x) are not currently supported.   
 Implementations using the BTIPS stack or external ANT devices will require a different package.    
 
 #2. CHIP DETAILS
@@ -35,33 +36,20 @@ Implementations using the BTIPS stack or external ANT devices will require a dif
     ===============================================   
 
 Note: wl12xx and bcm433x require proprietary firmware scripts with ANT support added.
+
 #3. COMPONENTS
 
 ## NEW REPOSITORIES
-You will require the following ant-wireless repositories from GitHub:
+You will require the following ant-wireless repositories:
 * ant-wireless/Android_build
 * ant-wireless/Android_ANTRadioService
 * ant-wireless/Linux_ant-hal
 * ant-wireless/Android_ANTHALService
 * ant-wireless/Android_antradio-library
 
-## REPLACED ANDROID REPOSITORIES
-### Vendor Specific BT HCI
-The following repositories are ONLY essential if using 'Vendor Specific BT HCI' transport (see 2. CHIP DETAILS).
-
-#### Android 4.2:
- Not currently supported
-
-#### Android 4.0, 4.1:
- * ant-wireless/platform_frameworks_base
-
-#### Android 2.1, 2.2, 2.3:
- * ant-wireless/platform_system_bluetooth
-
 #4. CONFIGURATION
 
 ## Include the ant-wireless repositories in Android platform source
-_TODO:  Add example local_manifest.xml_
 
 ant-wireless.mk from Android_build assumes that the path to Android_antradio-library is:
 
@@ -96,12 +84,3 @@ ant-wireless.mk from Android_build assumes that the path to Android_antradio-lib
 For debug version of the Android platform (this include userdebug and eng, but
 not user):  
 * /system/xbin/antradio_app  
-
-## 'Vendor Specific BT HCI' transport  
-
-### Android 4.0, 4.1:  
-* /system/lib/libandroid_runtime.so (modified)  
-* /system/framework/framework.jar (modified)  
-
-### Android 2.1, 2.2, 2.3:  
-* /system/lib/libbluedroid.so (modified)
