@@ -22,7 +22,7 @@ See the License for the specific language governing permissions and limitations 
 
 This is the Android 4.2 release for ANT support.
 
-Chips using Vendor Specific Bluetooth HCI messaging for ANT packets (wl12xx and bcm433x) are not currently supported.   
+As of the 4.2 build, chips using Vendor Specific Bluetooth HCI messaging for ANT packets (wl12xx and bcm433x) are not currently supported by this release. However, chip vendors may provide build support for their own products if you inquire with them.   
 Implementations using the BTIPS stack or external ANT devices will require a different package.    
 
 #2. CHIP DETAILS
