@@ -22,8 +22,15 @@ See the License for the specific language governing permissions and limitations 
 
 This is the Android 4.2 release for ANT support.
 
-As of the 4.2 build, chips using Vendor Specific Bluetooth HCI messaging for ANT packets (wl12xx and bcm433x) are not currently supported by this release. However, chip vendors may provide build support for their own products if you inquire with them.   
-Implementations using the BTIPS stack or external ANT devices will require a different package.    
+Implementations using the BTIPS stack or external ANT devices will require a different package.
+
+Additionally, in Android 4.2, the Bluetooth stack switched to Bluedroid (from BlueZ) and this existing ANT implementation for chips using Vendor Specific Bluetooth HCI messaging for ANT packets (wl12xx and bcm433x) is currently not compatible, until somebody is able to do the work for the different bluetooth stacks. The chip vendors may provide build support for their own products if you inquire with them. 
+
+If anybody is interested in doing the work for chips using Vendor Specific Bluetooth HCI messaging for ANT packets (wl12xx and bcm433x) the following information may be useful: These parts are multi-mode com chips, which include ANT alongside a range of other wireless protocols. Specifically, ANT has been "patched" on to the chip firmware after the chips were shipped.  This means there is no dedicated ANT transport the ANT packets can be sent to the chip on. To get around this limitation, ANT packets are sent inside Bluetooth Vendor-Specific HCI packets. This requires an integration with the systems Bluetooth stack which can:
+    -Enable/Disable ANT (power)
+    -Send raw ANT packets
+    -Receive raw ANT packets
+    Refer to the existing BlueZ implementation as a reference.    
 
 #2. CHIP DETAILS
     ===============================================   
