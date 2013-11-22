@@ -77,7 +77,7 @@ ant-wireless.mk from Android_build assumes that the path to Android_antradio-lib
 ###   Add to device.mk:
  a) ANT PRODUCT_PACKAGE definition:  
 
-    (call inherit-product, <path to Android_build project>/ant-wireless.mk)
+    $(call inherit-product, <path to Android_build project>/ant-wireless.mk)
 
  where \<path to Android_build project\> points to the location of the ant-wireless/Android_build repository in your build tree.  
 
