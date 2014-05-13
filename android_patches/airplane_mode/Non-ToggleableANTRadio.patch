@@ -1,0 +1,27 @@
+From 176f0e415c9c99da2b0666dfe961b1ebbfa22a6b Mon Sep 17 00:00:00 2001
+From: Beenish Khurshid <beenish.khurshid@dynastream.com>
+Date: Wed, 19 Feb 2014 10:12:24 -0700
+Subject: [PATCH] Add ANT to the list of airplane mode radios
+
+Adding ANT to the list of non-toggleable radios disables ANT, and prevents it from enabling, while
+airplane mode is on.
+---
+ packages/SettingsProvider/res/values/defaults.xml |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/packages/SettingsProvider/res/values/defaults.xml b/packages/SettingsProvider/res/values/defaults.xml
+index 2b02049..7df3164 100644
+--- a/packages/SettingsProvider/res/values/defaults.xml
++++ b/packages/SettingsProvider/res/values/defaults.xml
+@@ -21,7 +21,7 @@
+     <integer name="def_screen_off_timeout">60000</integer>
+     <bool name="def_airplane_mode_on">false</bool>
+     <!-- Comma-separated list of bluetooth, wifi, and cell. -->
+-    <string name="def_airplane_mode_radios" translatable="false">cell,bluetooth,wifi,nfc,wimax</string>
++    <string name="def_airplane_mode_radios" translatable="false">cell,bluetooth,wifi,nfc,wimax,ant</string>
+     <string name="airplane_mode_toggleable_radios" translatable="false">bluetooth,wifi,nfc</string>
+     <bool name="def_auto_time">true</bool>
+     <bool name="def_auto_time_zone">true</bool>
+-- 
+1.7.9.5
+

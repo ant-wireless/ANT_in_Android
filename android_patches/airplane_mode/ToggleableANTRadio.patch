@@ -1,0 +1,30 @@
+From b6c52e0046f8cef613865b8945c4b9b3c1823265 Mon Sep 17 00:00:00 2001
+From: Beenish Khurshid <beenish.khurshid@dynastream.com>
+Date: Wed, 19 Feb 2014 10:14:49 -0700
+Subject: [PATCH] Add ANT to the list of toggleable airplane mode radios
+
+Adding ANT to the list of toggleable radios allows ANT to behave in the same way as Wifi or
+Bluetooth in regards to operation during airplane mode: when airplane mode is turned on, ANT is
+disabled, but can be re-enabled by the user at any time.
+---
+ packages/SettingsProvider/res/values/defaults.xml |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/packages/SettingsProvider/res/values/defaults.xml b/packages/SettingsProvider/res/values/defaults.xml
+index 2b02049..d166496 100644
+--- a/packages/SettingsProvider/res/values/defaults.xml
++++ b/packages/SettingsProvider/res/values/defaults.xml
+@@ -21,8 +21,8 @@
+     <integer name="def_screen_off_timeout">60000</integer>
+     <bool name="def_airplane_mode_on">false</bool>
+     <!-- Comma-separated list of bluetooth, wifi, and cell. -->
+-    <string name="def_airplane_mode_radios" translatable="false">cell,bluetooth,wifi,nfc,wimax</string>
+-    <string name="airplane_mode_toggleable_radios" translatable="false">bluetooth,wifi,nfc</string>
++    <string name="def_airplane_mode_radios" translatable="false">cell,bluetooth,wifi,nfc,wimax,ant</string>
++    <string name="airplane_mode_toggleable_radios" translatable="false">bluetooth,wifi,nfc,ant</string>
+     <bool name="def_auto_time">true</bool>
+     <bool name="def_auto_time_zone">true</bool>
+     <bool name="def_accelerometer_rotation">true</bool>
+-- 
+1.7.9.5
+
