@@ -74,6 +74,7 @@ Some chipsets require a custom implementation of this layer as they do not provi
 For such chipsets, integration with the Bluetooth stack is required to communicate with and control the chip.
 Talk to your chipset provider for more details.
 
+* **Legacy Compatibility Library** - This non-functional library is required to maintain compatibility with certain versions of the Android ANT stack.
 * **ANT HAL** - This C library communicates with the firmware to send and receive messages as well as control the chipset.
 * **ANT HAL Service** - This Android application is a JNI wrapper for ANT HAL.
 
