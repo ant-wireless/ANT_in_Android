@@ -75,6 +75,7 @@ For such chipsets, integration with the Bluetooth stack is required to communica
 Talk to your chipset provider for more details.
 
 * **Legacy Compatibility Library** - This non-functional library is required to maintain compatibility with certain versions of the Android ANT stack.
+* **Airplane Mode Patch** - ANT radio requires wireless signal transmission and so should be added to the airplane mode radios list. We recommend ANT also be added to the airplane mode toggleable radios list to allow ANT to behave in the same way as Wi-Fi in that ANT is disabled when Airplane mode is turned on, but can be re-enabled subsequently by the user. Apply the ToggleableANTRadio.patch to enable suggested airplane mode behaviour, or the Non-ToggleableANTRadio.patch to add ANT to only the airplane mode radios list.
 * **ANT HAL** - This C library communicates with the firmware to send and receive messages as well as control the chipset.
 * **ANT HAL Service** - This Android application is a JNI wrapper for ANT HAL.
 
