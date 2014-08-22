@@ -51,7 +51,7 @@ Before you begin, talk to your chipset vendor to ensure your chip is ANT capable
         * ```/system/lib/libantradio.so```
         * ```/system/app/AntHalService.apk```
         * ```/system/app/ANTRadioService.apk```
-        * ```/system/app/AntPlusPlugins.apk```
+        * ```/system/app/AntPlusPluginsService.apk```
         * ```/system/xbin/antradio_app``` (on debug builds)
     2. Test ANT functionality.
     
@@ -83,7 +83,7 @@ Talk to your chipset provider for more details.
 These are applications that will be pre-installed on your device to allow Android Applications that use ANT and ANT+ technology to operate using an easy to use API. These applications are also available through the PlayStore and are not required to be system applications.
 
 * **ANT Radio Service** - This Android service allows apps to use a simplified interface to communicate using the ANT protocol.
-* **ANT+ Plugins** - This Android service allows apps to use a simplified interface to communicate using ANT+ Profiles.
+* **ANT+ Plugins Service** - This Android service allows apps to use a simplified interface to communicate using ANT+ Profiles.
 
 # Legal
 ***
