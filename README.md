@@ -8,6 +8,7 @@ Before you begin, talk to your chipset vendor to ensure your chip is ANT capable
 1. Clone this repository locally.
 2. Copy the appropriate manifest, into the ```.repo/local_manifests/``` directory of your Android Platform source, creating the local_manifests directory if needed. The following manifests are available:
     * **ANT_manifest.xml** - This is the recommended package for most platforms as it pulls in the latest stable components of the ANT Android System Layer. 
+    * **ANT_hidl_preview_manifest.xml** - This package pulls in versions of the components that have been modified to be treble-compatible. Should be used when developing for android 8.0+
     * **Android_System_Package_2-3-0** - This package is ideal for adding ANT to Android 4.1.2 using chipsets that do not have a dedicated ANT channel (see System under Components, below). This package is available under legacy/android-4.1.2_r1/.
 3. Execute ```repo sync``` in a shell. This will pull in the following components into your platform:
     * ANT HAL
@@ -27,6 +28,7 @@ Before you begin, talk to your chipset vendor to ensure your chip is ANT capable
       BOARD_ANT_WIRELESS_DEVICE := "<Chipset>"
       ```
      Where ```<Chipset>``` is the chipset code provided to you by your chip vendor. Note the double quotes in the above line, they are important to include.
+     This step is not nescessary if using the hidl-preview.
 
     ii. Add the following to ```device/<company>/<board>/device.mk```:
 

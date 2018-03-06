@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- repo local manifest for using ANT in android through the new hidl interface -->
+<manifest>
+
+    <remote name="github_ant-wireless"
+        fetch="git://github.com/ant-wireless"
+        />
+
+    <project name="Android_build"
+        path="external/ant-wireless/build"
+        remote="github_ant-wireless"
+        revision="refs/heads/features/hidl-support"
+        >
+        <linkfile src="parent_Android.bp" dest="external/ant-wireless/Android.bp" />
+    </project>
+
+    <project name="Android_antradio-library"
+        path="external/ant-wireless/antradio-library"
+        remote="github_ant-wireless"
+        revision="refs/heads/master"
+        />
+
+    <project name="Linux_ant-hal"
+        path="external/ant-wireless/hidl"
+        remote="github_ant-wireless"
+        revision="refs/heads/features/hidl-support"
+        />
+
+    <project name="Android_ANTHALService"
+        path="external/ant-wireless/ANTHALService"
+        remote="github_ant-wireless"
+        revision="refs/heads/features/hidl-support"
+        />
+
+    <project name="Android_ANTRadioService"
+        path="external/ant-wireless/ANTRadioService"
+        remote="github_ant-wireless"
+        revision="refs/heads/master"
+        />
+
+    <project name="Android_ANTPlusPluginsService"
+        path="external/ant-wireless/Android_ANTPlusPluginsService"
+        remote="github_ant-wireless"
+        revision="refs/heads/master"
+        />
+
+</manifest>
